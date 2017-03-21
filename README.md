@@ -1,3 +1,5 @@
+-For code review use files from folder named <b>Regular</b></br>
+-SAVE, discard and delete will appear when user starts typing the event name</br>
 -SAVE, discard and delete will appear when user starts typing the event name</br>
 -Discard will clear input fields and delete will clear localStorage</br>
 -Buttons SAVE and SAVE EVENT will save all inputs in localStorage</br>
