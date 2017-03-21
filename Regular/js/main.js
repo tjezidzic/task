@@ -297,9 +297,12 @@ window.onload = function(){
 			document.getElementById('arrow').style.transform = 'rotate(0deg)';
 		}
 	});
-	/*CREATING CLONE FOR NOTIFICATION ROW*/
-	var tr = document.getElementById('clone_notifi_row').cloneNode(true);
-	document.getElementById('notifi_row').appendChild(tr);
+	/*NEED DELAY BEACUSE OF JSON FILE (ELEMENTS WOULD BE EMPTY WIHTOUT OF THIS)*/
+	setTimeout(function() {
+  	/*CREATING CLONE FOR NOTIFICATION ROW*/
+		var tr = document.getElementById('clone_notifi_row').cloneNode(true);
+		document.getElementById('notifi_row').appendChild(tr);
+	}, 100);
 };
 
 /*NOTIFICATIONS BOXES - PROFILE, MENU, NOTIFICATION, SEARCH*/
