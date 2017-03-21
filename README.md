@@ -1,0 +1,5 @@
+-SAVE, discard and delete will appear when user starts typing the event name</br>
+-Discard will clear input fields and delete will clear localStorage</br>
+-Buttons SAVE and SAVE EVENT will save all inputs in localStorage</br>
+-Button Publish event will only save list of guest and left section</br>
+-Empty fields will turn into red when is any SAVE button clicked</br>
