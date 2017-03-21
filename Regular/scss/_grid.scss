@@ -1,0 +1,95 @@
+@mixin col {
+    float:left;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+    -moz-background-clip:padding-box !important;
+    -webkit-background-clip:padding-box !important;
+    background-clip:padding-box !important;
+}
+
+.col {
+   @include col;
+   width: 100%;
+}
+
+@mixin span($num, $gutter_pc, $gutter_px, $padding, $max_columns) {
+    $one_col: (100% - ($gutter_pc * ($max_columns - 1))) / $max_columns;
+    width:($one_col * $num) + ($gutter_pc * ($num - 1));
+    border-left-width:$gutter_px;
+    padding:$padding;
+    margin-left:$gutter_pc;
+    float: left;
+}
+
+@mixin span_first {
+    margin-left:0;
+}
+
+    /*-----------------------------------------------------------------------------
+
+    Span 1:    4.16666666667%
+    Span 2:    8.33333333333%
+    Span 3:    12.5%
+    Span 4:    16.6666666667%
+    Span 5:    20.8333333333%
+    Span 6:    25.0%
+    Span 7:    29.1666666667%
+    Span 8:    33.3333333333%
+    Span 9:    37.5%
+    Span 10:    41.6666666667%
+    Span 11:    45.8333333333%
+    Span 12:    50.0%
+    Span 13:    54.1666666667%
+    Span 14:    58.3333333333%
+    Span 15:    62.5%
+    Span 16:    66.6666666667%
+    Span 17:    70.8333333333%
+    Span 18:    75.0%
+    Span 19:    79.1666666667%
+    Span 20:    83.3333333333%
+    Span 21:    87.5%
+    Span 22:    91.6666666667%
+    Span 23:    95.8333333333%
+    Span 24:    100%
+
+    ----------------------------------------------------------------------------- */
+       
+.col {
+    margin-left:0%;
+    padding:0 0%;
+}
+$max_columns: 24;
+$padding: 0 0%;
+$gutter_px: 0;
+$gutter_pc: 0%;
+
+.col_span_1 {
+    @include span(1, $gutter_pc, $gutter_px, $padding, $max_columns);
+}
+.col_span_2 {
+    @include span(2, $gutter_pc, $gutter_px, $padding, $max_columns);
+}
+.col_span_3 {
+    @include span(3, $gutter_pc, $gutter_px, $padding, $max_columns);
+}
+.col_span_8 {
+    @include span(8, $gutter_pc, $gutter_px, $padding, $max_columns);
+}
+.col_span_12 {
+    @include span(12, $gutter_pc, $gutter_px, $padding, $max_columns);
+}
+.col_span_14 {
+    @include span(14, $gutter_pc, $gutter_px, $padding, $max_columns);
+}
+.col_span_22 {
+    @include span(22, $gutter_pc, $gutter_px, $padding, $max_columns);
+}
+
+/*OFFSET*/
+.col_offset_1 {
+    margin-left: 4.16666666667%;
+}
+.col_offset_2 {
+    margin-left: 8.33333333333%;
+}

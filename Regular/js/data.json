@@ -1,0 +1,16 @@
+{
+  "eventType": ["Public", "Private", "Default"],
+  "moreActions": {
+      "values": ["More actions", "Repeating", "Temporary"]
+  },
+  "notifications": {
+      "type": ["Email", "Browser alert"],
+      "time": ["Minutes", "Hours"]
+  },
+  "calendar":{
+    "users": ["Mario Šestak", "Zoran Završki", "Tomislav Grubišić"],
+    "showAs": {
+      "values": ["Show me as", "Owner", "Admin"]
+    }
+  }
+}
